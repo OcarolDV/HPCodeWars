@@ -9,15 +9,17 @@ def checkDigit(upc):
             odds = odds + upc[i]
         else:
             even = even + upc[i]
-            
 
     total = (odds * 3) + even
     total = total % 10
+
     if total != 0:
-        total = total - 10
+        total = 10 - total
+
 
     upc.append(total)
-    print (upc)
+    print(upc)
+
 
 checkDigit(upc1)
 
